@@ -2,7 +2,7 @@ import faker from 'faker';
 
 import Tweet from '../models/Tweet';
 
-const TWEETS_TOTAL = 10;
+const TWEETS_TOTAL = 5;
 
 export default async () => {
   try {
