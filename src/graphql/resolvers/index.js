@@ -1,19 +1,20 @@
 import GraphQLDate from 'graphql-date';
 
-import TweetResolver from './tweet-resolvers';
-import UserResolver from './user-resolvers';
+import TweetResolvers from './tweet-resolvers';
+import UserResolvers from './user-resolvers';
 
 export default {
   Date: GraphQLDate,
   Query: {
-    getTweet: TweetResolver.getTweet,
-    getTweets: TweetResolver.getTweets
+    getTweet: TweetResolvers.getTweet,
+    getTweets: TweetResolvers.getTweets,
+    me: UserResolvers.me
   },
   Mutation: {
-    createTweet: TweetResolver.createTweet,
-    updateTweet: TweetResolver.updateTweet,
-    deleteTweet: TweetResolver.deleteTweet,
-    signup: UserResolver.signup,
-    login: UserResolver.login
+    createTweet: TweetResolvers.createTweet,
+    updateTweet: TweetResolvers.updateTweet,
+    deleteTweet: TweetResolvers.deleteTweet,
+    signup: UserResolvers.signup,
+    login: UserResolvers.login
   }
-}
+};
